@@ -5,15 +5,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node --env-file .env --watch server.ts",
+    "dev": "node --env-file .env --watch src/server.ts",
+    "db:seed": "node --env-file .env src/database/seed.ts",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:studio": "drizzle-kit studio"
+    "db:studio": "drizzle-kit studio",
+    "test": "vitest run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^9.9.0",
     "@fastify/swagger": "^9.5.1",
     "@fastify/swagger-ui": "^5.2.3",
     "@scalar/fastify-api-reference": "^1.34.2",
@@ -26,8 +29,11 @@
   },
   "devDependencies": {
     "@types/node": "^24.2.1",
+    "@types/supertest": "^6.0.3",
     "drizzle-kit": "^0.31.4",
+    "supertest": "^7.1.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }
