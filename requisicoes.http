@@ -2,8 +2,7 @@ POST http://localhost:3333/courses
 Content-Type: application/json
 
 {
-     "title": "Achorro",
-    "description": "au au au "
+    "title": "Reno Siqueira"
 }
  
 ###
@@ -16,4 +15,4 @@ GET http://localhost:3333/courses?orderBy=title
 ###
 
 
-GET http://localhost:3333/courses/eedf4a11-c490-4577-9bc1-457021f34b31
+GET http://localhost:3333/courses/32b8517f-f0d8-4299-ae30-483f0e722397

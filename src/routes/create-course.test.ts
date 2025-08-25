@@ -9,7 +9,10 @@ test('create a course', async () => {
   const response = await request(server.server)
     .post('/courses')
     .set('Content-Type', 'application/json')
-    .send({ title: faker.lorem.words(4) })
+    .send({
+      title: faker.lorem.words(4),
+      description: faker.lorem.sentence()
+    })
 
   expect(response.status).toEqual(201)
   expect(response.body).toEqual({
