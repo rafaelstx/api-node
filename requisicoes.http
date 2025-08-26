@@ -1,8 +1,9 @@
 POST http://localhost:3333/courses
 Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YzZmMjUxMS0wNjUwLTRiZjMtOTA4YS1iNTVkM2MzZmE4MjMiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjIzNjY3NH0.JUCzXm2hO1GwNPXArarSol9eAM4A0DuBcH7wFQdAC_A
 
 {
-    "title": "Reno Siqueira"
+    "title": "Faelis Vereador"
 }
  
 ###
@@ -16,3 +17,16 @@ GET http://localhost:3333/courses?orderBy=title
 
 
 GET http://localhost:3333/courses/32b8517f-f0d8-4299-ae30-483f0e722397
+
+
+
+###
+
+
+POST http://localhost:3333/sessions
+Content-Type: application/json
+
+{
+    "email": "Eduarda_Costa@hotmail.com",
+    "password": "123456"
+}
