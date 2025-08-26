@@ -1,6 +1,6 @@
 POST http://localhost:3333/courses
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YzZmMjUxMS0wNjUwLTRiZjMtOTA4YS1iNTVkM2MzZmE4MjMiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTc1NjIzNjY3NH0.JUCzXm2hO1GwNPXArarSol9eAM4A0DuBcH7wFQdAC_A
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1YzZmMjUxMS0wNjUwLTRiZjMtOTA4YS1iNTVkM2MzZmE4MjMiLCJyb2xlIjoibWFuYWdlciIsImlhdCI6MTc1NjIzNjg0N30.ojtvH-BqGEI3mezzQsqAM4-iLi877qHUYTUGRUUh7RY
 
 {
     "title": "Faelis Vereador"
