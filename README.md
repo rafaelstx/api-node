@@ -9,17 +9,17 @@ O objetivo é fornecer uma base robusta para aplicações backend modernas, com 
 
 # Tecnologias Utilizadas
 
-**Node.js**: Ambiente de execução JavaScript no backend.
-**Fastify**: Framework web rápido e eficiente para APIs.
-**Drizzle ORM**: ORM moderno para TypeScript, com migrations SQL versionadas.
-**PostgreSQL**: Banco de dados relacional robusto.
-**Zod**: Validação de dados e schemas.
-**jsonwebtoken**: Geração e validação de tokens JWT.
-**argon2**: Hash de senhas seguro.
-**Vitest**: Testes automatizados e cobertura de código.
-**Docker**: Containerização para desenvolvimento e produção.
-**Fly.io**: Deploy em nuvem global.
-**Neon**: Banco de dados PostgreSQL gerenciado na nuvem.
+- **Node.js**: Ambiente de execução JavaScript no backend.
+- **Fastify**: Framework web rápido e eficiente para APIs.
+- **Drizzle ORM**: ORM moderno para TypeScript, com migrations SQL versionadas.
+- **PostgreSQL**: Banco de dados relacional robusto.
+- **Zod**: Validação de dados e schemas.
+- **jsonwebtoken**: Geração e validação de tokens JWT.
+- **argon2**: Hash de senhas seguro.
+- **Vitest**: Testes automatizados e cobertura de código.
+- **Docker**: Containerização para desenvolvimento e produção.
+- **Fly.io**: Deploy em nuvem global.
+- **Neon**: Banco de dados PostgreSQL gerenciado na nuvem.
 
 
 
@@ -80,31 +80,34 @@ npm run test
 ---
 
 # Principais Funcionalidades
-**CRUD de cursos**: criar, listar, buscar por ID.
-**Autenticação JWT**: login e rotas protegidas.
-**Validação de dados**: schemas Zod em todas as rotas.
-**Migrations versionadas**: Drizzle ORM gera e aplica migrations SQL.
-**Testes automatizados**: cobertura de código com Vitest.
-**Seed de banco**: script para popular dados iniciais.
-**Pronto para produção**: Dockerfile, deploy no Fly.io, variáveis seguras.
+- **CRUD de cursos**: criar, listar, buscar por ID.
+- **Autenticação JWT**: login e rotas protegidas.
+- **Validação de dados**: schemas Zod em todas as rotas.
+- **Migrations versionadas**: Drizzle ORM gera e aplica migrations SQL.
+- **Testes automatizados**: cobertura de código com Vitest.
+- **Seed de banco**: script para popular dados iniciais.
+- **Pronto para produção**: Dockerfile, deploy no Fly.io, variáveis seguras.
 
 
 
 ---
 
-# Estrutura do Projeto
+## Estrutura do Projeto
+
+```
 api-node/
 ├── src/
 │   ├── database/
-│   │   ├── client.ts         # Conexão e configuração do Drizzle ORM
-│   │   ├── schema.ts         # Definição das tabelas e enums do banco
-│   │   └── seed.ts           # Script para popular o banco com dados iniciais
+│   │   ├── client.ts
+│   │   ├── schema.ts
+│   │   └── seed.ts
 │   └── routes/
-│       ├── create-course.ts      # Rota para criar cursos
-│       ├── get-courses.ts        # Rota para listar cursos
-│       ├── get-course-by-id.ts   # Rota para buscar curso por ID
-│       └── login.ts              # Rota de autenticação/login
+│       ├── create-course.ts
+│       ├── get-courses.ts
+│       ├── get-course-by-id.ts
+│       └── login.ts
 ├── drizzle/
+<<<<<<< HEAD
 │   ├── 0000_nome_migration.sql   # Migrations SQL geradas pelo Drizzle
 │   └── ...                       # Outras migrations
 ├── .env                          # Variáveis de ambiente (NUNCA subir para o GitHub)
@@ -115,3 +118,31 @@ api-node/
 ├── README.md                     # Documentação do projeto
 
 └── fly.toml                      # Configuração de deploy no Fly.io
+=======
+│   ├── 0000_nome_migration.sql
+│   └── ...
+├── .env
+├── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── package.json
+├── README.md
+└── fly.toml
+```
+
+- `client.ts`: Conexão e configuração do Drizzle ORM
+- `schema.ts`: Definição das tabelas e enums do banco
+- `seed.ts`: Script para popular o banco com dados iniciais
+- `create-course.ts`: Rota para criar cursos
+- `get-courses.ts`: Rota para listar cursos
+- `get-course-by-id.ts`: Rota para buscar curso por ID
+- `login.ts`: Rota de autenticação/login
+- `drizzle/*.sql`: Migrations SQL geradas pelo Drizzle
+- `.env`: Variáveis de ambiente (**NUNCA subir para o GitHub**)
+- `.gitignore`: Arquivos/pastas ignorados no versionamento
+- `docker-compose.yml`: Sobe o banco de dados localmente via Docker
+- `Dockerfile`: Build da aplicação para produção
+- `package.json`: Dependências e scripts do projeto
+- `README.md`: Documentação do projeto
+- `fly.toml`: Configuração de deploy no Fly.io
+>>>>>>> 47923b1 (README update)
