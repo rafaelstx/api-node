@@ -1,5 +1,4 @@
 <h1 align="center"> API Node.js </h1>
-![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 Este projeto é uma API RESTful desenvolvida em Node.js, utilizando Fastify como framework web, Drizzle ORM para acesso ao banco de dados PostgreSQL, autenticação JWT, validação com Zod, e deploy preparado para ambientes modernos como Docker e Fly.io.
 O objetivo é fornecer uma base robusta para aplicações backend modernas, com testes automatizados, cobertura de código e práticas recomendadas de versionamento e deploy.
@@ -114,4 +113,5 @@ api-node/
 ├── Dockerfile                    # Build da aplicação para produção
 ├── package.json                  # Dependências e scripts do projeto
 ├── README.md                     # Documentação do projeto
+
 └── fly.toml                      # Configuração de deploy no Fly.io
